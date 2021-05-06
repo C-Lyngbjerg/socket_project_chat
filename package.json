@@ -4,7 +4,10 @@
   "description": "NodeJS project using sockets to make a simple chat",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "cross-env PORT=3000 nodemon app.js",
+    "start": "node app.js",
+    "eslint": "./node_modules/.bin/eslint app.js"
   },
   "repository": {
     "type": "git",
@@ -13,7 +16,13 @@
   "author": "Lyngbjerg",
   "license": "MIT",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "express": "^4.17.1",
     "socket.io": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
   }
 }
